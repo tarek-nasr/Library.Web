@@ -1,3 +1,6 @@
+using Library.Data.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace Library.Web
 {
     public class Program
@@ -8,6 +11,11 @@ namespace Library.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+
+            builder.Services.AddDbContext<LibraryDbContext>(options =>
+                options.UseInMemoryDatabase("LibraryDb"));
+
 
             var app = builder.Build();
 
