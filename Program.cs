@@ -1,4 +1,6 @@
 using Library.Data.Models;
+using Library.Services.Interfaces;
+using Library.Services.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace Library.Web
@@ -12,6 +14,9 @@ namespace Library.Web
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddScoped<IAuthorService, AuthorService>();
+            builder.Services.AddScoped<IBookService, BookService>();
+            builder.Services.AddScoped<IBorrowingService, BorrowingService>();
 
             builder.Services.AddDbContext<LibraryDbContext>(options =>
                 options.UseInMemoryDatabase("LibraryDb"));
