@@ -55,5 +55,43 @@ namespace Library.Web.Controllers
             await _bookService.AddAsync(book);
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var book = await _bookService.GetByIdAsync(id);
+            if (book == null) return NotFound();
+
+            await PopulateAuthorsDropDown(book.AuthorId);
+            ViewBag.Genres = Enum.GetValues(typeof(Genre));
+            return View(book);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(Book book)
+        {
+            if (ModelState.IsValid)
+            {
+                await PopulateAuthorsDropDown(book.AuthorId);
+                ViewBag.Genres = Enum.GetValues(typeof(Genre));
+                return View(book);
+            }
+
+            await _bookService.UpdateAsync(book);
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var book = await _bookService.GetByIdAsync(id);
+            if (book == null) return NotFound();
+            return View(book);
+        }
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            await _bookService.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
