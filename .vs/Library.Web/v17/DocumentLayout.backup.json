@@ -3,35 +3,16 @@
   "WorkspaceRootPath": "D:\\Library.Web\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3D9E3CD-BF53-4954-9620-A150307890BC}|C:\\Users\\DELL\\source\\repos\\Library.Data\\Library.Data.csproj|c:\\users\\dell\\source\\repos\\library.data\\models\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\authors\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\authors\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\authors\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\authors\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\authors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\authors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\authors\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\authors\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\authors\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\authors\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 698,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,97 +38,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Library.Web\\Views\\Books\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Books\\Index.cshtml",
+              "ToolTip": "D:\\Library.Web\\Views\\Books\\Index.cshtml",
+              "RelativeToolTip": "Views\\Books\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T09:17:53.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LibraryDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Library.Data\\Models\\LibraryDbContext.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Library.Data\\Models\\LibraryDbContext.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAwAAABIAAAAAAAAAA==",
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "D:\\Library.Web\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
+              "ToolTip": "D:\\Library.Web\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "Controllers\\BooksController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:01:20.519Z",
+              "WhenOpened": "2025-05-13T09:09:36.583Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Authors\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Authors\\Delete.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Authors\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Authors\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T08:53:32.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Authors\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Authors\\Edit.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Authors\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Authors\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T08:40:45.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Authors\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Authors\\Create.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Authors\\Create.cshtml",
-              "RelativeToolTip": "Views\\Authors\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T07:34:11.461Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Authors\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Authors\\Details.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Authors\\Details.cshtml",
-              "RelativeToolTip": "Views\\Authors\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T07:25:22.966Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T06:28:42.786Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Authors\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Authors\\Index.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Authors\\Index.cshtml",
-              "RelativeToolTip": "Views\\Authors\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T06:24:03.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "AuthorsController.cs",
               "DocumentMoniker": "D:\\Library.Web\\Controllers\\AuthorsController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthorsController.cs",
               "ToolTip": "D:\\Library.Web\\Controllers\\AuthorsController.cs",
               "RelativeToolTip": "Controllers\\AuthorsController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAmwFQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T06:16:22.801Z",
               "EditorCaption": ""
