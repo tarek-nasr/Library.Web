@@ -47,8 +47,32 @@ namespace Library.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var author = await _authorService.GetByIdAsync(id);
+            if (author == null)
+            {
+                return NotFound();
+            }
+            return View(author);
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> Edit(Author author)
+        {
+            if (!ModelState.IsValid) return View(author);
 
+            bool isUnique = await _authorService.IsNameUniqueAsync(author.FullName, author.Id);
+            if (!isUnique)
+            {
+                ModelState.AddModelError("FullName", "An author with this name already exists.");
+                return View(author);
+            }
+
+            await _authorService.UpdateAsync(author);
+            return RedirectToAction(nameof(Index));
+        }
 
 
     }
