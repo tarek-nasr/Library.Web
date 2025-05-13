@@ -11,6 +11,14 @@
       "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\authors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\authors\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\authors\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\authors\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\authors\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 698,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,14 +47,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Library.Web\\Views\\Authors\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Authors\\Create.cshtml",
+              "ToolTip": "D:\\Library.Web\\Views\\Authors\\Create.cshtml",
+              "RelativeToolTip": "Views\\Authors\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T07:34:11.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Library.Web\\Views\\Authors\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Authors\\Details.cshtml",
+              "ToolTip": "D:\\Library.Web\\Views\\Authors\\Details.cshtml",
+              "RelativeToolTip": "Views\\Authors\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T07:25:22.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Library.Web\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Library.Web\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T06:28:42.786Z"
+              "WhenOpened": "2025-05-13T06:28:42.786Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,9 +91,10 @@
               "RelativeDocumentMoniker": "Views\\Authors\\Index.cshtml",
               "ToolTip": "D:\\Library.Web\\Views\\Authors\\Index.cshtml",
               "RelativeToolTip": "Views\\Authors\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACkAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T06:24:03.185Z"
+              "WhenOpened": "2025-05-13T06:24:03.185Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -68,7 +104,7 @@
               "RelativeDocumentMoniker": "Controllers\\AuthorsController.cs",
               "ToolTip": "D:\\Library.Web\\Controllers\\AuthorsController.cs",
               "RelativeToolTip": "Controllers\\AuthorsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAuwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T06:16:22.801Z",
               "EditorCaption": ""
