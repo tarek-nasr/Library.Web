@@ -74,6 +74,21 @@ namespace Library.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<IActionResult> Delete(int id)
+        {
+            var author = await _authorService.GetByIdAsync(id);
+            if (author == null)
+            {
+                return NotFound();
+            }
+            return View(author);
+        }
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            await _authorService.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
+        }
 
     }
 }
