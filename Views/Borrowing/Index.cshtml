@@ -1,47 +1,26 @@
 ﻿@model IEnumerable<Library.Data.Models.BorrowTransaction>
 
-@{
-    ViewData["Title"] = "Index";
-}
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<h2>Borrow History</h2>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BorrowedDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReturnedDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Book)
-            </th>
-            <th></th>
+            <th>Book</th>
+            <th>Author</th>
+            <th>Borrowed Date</th>
+            <th>Returned Date</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.BorrowedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReturnedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Book.Title)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var t in Model)
+        {
+            <tr>
+                <td>@t.Book.Title</td>
+                <td>@t.Book.Author.FullName</td>
+                <td>@t.BorrowedDate.ToShortDateString()</td>
+                <td>@(t.ReturnedDate?.ToShortDateString() ?? "Not Returned")</td>
+            </tr>
+        }
     </tbody>
 </table>
+<a class="btn btn-primary" href="/Borrowing/Borrow">Borrow a Book</a>
+<a class="btn btn-success" href="/Borrowing/Return">Return a Book</a>

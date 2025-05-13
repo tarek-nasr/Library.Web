@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\controllers\\borrowingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:controllers\\borrowingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\borrowing\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\borrowing\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 698,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +30,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Borrowing\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Borrowing\\Index.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Borrowing\\Index.cshtml",
-              "RelativeToolTip": "Views\\Borrowing\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T18:18:20.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "BorrowingController.cs",
               "DocumentMoniker": "D:\\Library.Web\\Controllers\\BorrowingController.cs",
               "RelativeDocumentMoniker": "Controllers\\BorrowingController.cs",
               "ToolTip": "D:\\Library.Web\\Controllers\\BorrowingController.cs",
               "RelativeToolTip": "Controllers\\BorrowingController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwDkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T18:14:23.685Z",
+              "WhenOpened": "2025-05-13T21:43:45.773Z",
               "EditorCaption": ""
             }
           ]

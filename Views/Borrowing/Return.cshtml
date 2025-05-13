@@ -1,0 +1,21 @@
+﻿@model Library.Data.ViewModels.ReturnViewModel
+
+@{
+    ViewData["Title"] = "Return Book";
+}
+
+<h2>Return a Book</h2>
+
+<form asp-action="Return" method="post">
+    <div class="form-group">
+        <label asp-for="TransactionId" class="control-label"></label>
+        <input asp-for="TransactionId" class="form-control" />
+        <span asp-validation-for="TransactionId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Return</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
