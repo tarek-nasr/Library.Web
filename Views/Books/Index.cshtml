@@ -40,7 +40,7 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Author.Email)
+                @Html.DisplayFor(modelItem => item.Author.FullName)
             </td>
             <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a> |
