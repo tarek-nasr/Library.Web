@@ -31,15 +31,23 @@ namespace Library.Web.Controllers
             return View();
         }
 
+
         [HttpPost]
         public async Task<IActionResult> Create(Author author)
         {
             if (!ModelState.IsValid) return View(author);
 
-            bool isUnique = await _authorService.IsNameUniqueAsync(author.FullName);
-            if (!isUnique)
+            bool isNameUnique = await _authorService.IsNameUniqueAsync(author.FullName);
+            if (!isNameUnique)
             {
                 ModelState.AddModelError("FullName", "An author with this name already exists.");
+                return View(author);
+            }
+
+            bool isEmailUnique = await _authorService.IsEmailUniqueAsync(author.Email);
+            if (!isEmailUnique)
+            {
+                ModelState.AddModelError("Email", "An author with this email already exists.");
                 return View(author);
             }
 
@@ -63,10 +71,17 @@ namespace Library.Web.Controllers
         {
             if (!ModelState.IsValid) return View(author);
 
-            bool isUnique = await _authorService.IsNameUniqueAsync(author.FullName, author.Id);
-            if (!isUnique)
+            bool isNameUnique = await _authorService.IsNameUniqueAsync(author.FullName, author.Id);
+            if (!isNameUnique)
             {
                 ModelState.AddModelError("FullName", "An author with this name already exists.");
+                return View(author);
+            }
+
+            bool isEmailUnique = await _authorService.IsEmailUniqueAsync(author.Email, author.Id);
+            if (!isEmailUnique)
+            {
+                ModelState.AddModelError("Email", "An author with this email already exists.");
                 return View(author);
             }
 
