@@ -45,16 +45,10 @@ namespace Library.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Book book)
         {
-            if (ModelState.IsValid)
-            {
-                await PopulateAuthorsDropDown();
-                ViewBag.Genres = Enum.GetValues(typeof(Genre));
-                return View(book);
-            }
-
             await _bookService.AddAsync(book);
             return RedirectToAction(nameof(Index));
         }
+
 
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
@@ -69,16 +63,10 @@ namespace Library.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(Book book)
         {
-            if (ModelState.IsValid)
-            {
-                await PopulateAuthorsDropDown(book.AuthorId);
-                ViewBag.Genres = Enum.GetValues(typeof(Genre));
-                return View(book);
-            }
-
             await _bookService.UpdateAsync(book);
             return RedirectToAction(nameof(Index));
         }
+
 
 
         public async Task<IActionResult> Delete(int id)

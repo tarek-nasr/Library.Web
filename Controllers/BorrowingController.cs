@@ -53,12 +53,14 @@ namespace Library.Web.Controllers
             }
         }
 
-
-
-        public IActionResult Return()
+        public async Task<IActionResult> Return()
         {
+            var activeTransactions = await _borrowingService.GetActiveBorrowingsAsync();
+            ViewBag.ActiveBorrowings = new SelectList(activeTransactions, "Id", "BookTitle");
+
             return View(new ReturnViewModel());
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Return(ReturnViewModel model)

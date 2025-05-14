@@ -8,8 +8,10 @@
 
 <form asp-action="Return" method="post">
     <div class="form-group">
-        <label asp-for="TransactionId" class="control-label"></label>
-        <input asp-for="TransactionId" class="form-control" />
+        <label asp-for="TransactionId" class="control-label">Active Borrowings</label>
+        <select asp-for="TransactionId" asp-items="ViewBag.ActiveBorrowings" class="form-control">
+            <option value="">-- Select Borrowing --</option>
+        </select>
         <span asp-validation-for="TransactionId" class="text-danger"></span>
     </div>
 
