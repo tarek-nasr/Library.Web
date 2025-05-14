@@ -1,4 +1,5 @@
 ﻿using Library.Data.Models;
+using Library.Data.ViewModels;
 using Library.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -20,6 +21,7 @@ namespace Library.Web.Controllers
             var books = await _bookService.GetAllAsync();
             return View(books);
         }
+
         public async Task<IActionResult> Details(int id)
         {
             var book = await _bookService.GetByIdAsync(id);
@@ -27,8 +29,23 @@ namespace Library.Web.Controllers
             {
                 return NotFound();
             }
-            return View(book);
+
+            var viewModel = new BookViewModel
+            {
+                Id = book.Id,
+                Title = book.Title,
+                Genre = book.Genre,
+                Description = book.Description,
+                AuthorFullName = book.Author.FullName
+            };
+
+            return View(viewModel);
         }
+
+
+
+
+
         private async Task PopulateAuthorsDropDown(int? selectedId = null)
         {
             var authors = await _authorService.GetAllAsync();
