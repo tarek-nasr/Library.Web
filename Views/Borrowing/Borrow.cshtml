@@ -7,7 +7,7 @@
 
 <form asp-action="Borrow" method="post">
     <div class="form-group">
-        <label asp-for="BookId" class="control-label"></label>
+        <label asp-for="BookId" class="control-label">Books</label>
         <select asp-for="BookId" asp-items="ViewBag.BookList" class="form-control">
             <option value="">-- Select --</option>
         </select>
