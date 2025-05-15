@@ -16,7 +16,42 @@ namespace Library.Web.Controllers
 
 
 
-        public async Task<IActionResult> Index(string status, DateTime? borrowDate, DateTime? returnDate)
+        //public async Task<IActionResult> Index(string status, DateTime? borrowDate, DateTime? returnDate)
+        //{
+        //    var transactionsQuery = await _borrowingService.GetAllQueryableAsync();
+
+        //    if (!string.IsNullOrEmpty(status))
+        //    {
+        //        transactionsQuery = status switch
+        //        {
+        //            "borrowed" => transactionsQuery.Where(t => t.ReturnedDate == null),
+        //            "available" => transactionsQuery.Where(t => t.ReturnedDate != null),
+        //            _ => transactionsQuery
+        //        };
+        //    }
+
+        //    if (borrowDate.HasValue)
+        //    {
+        //        transactionsQuery = transactionsQuery.Where(t => t.BorrowedDate.Date == borrowDate.Value.Date);
+        //    }
+
+        //    if (returnDate.HasValue)
+        //    {
+        //        transactionsQuery = transactionsQuery.Where(t => t.ReturnedDate.HasValue &&
+        //                                                       t.ReturnedDate.Value.Date == returnDate.Value.Date);
+        //    }
+
+        //    var filteredTransactions = await transactionsQuery.ToListAsync();
+
+        //    ViewBag.SelectedStatus = status;
+        //    ViewBag.BorrowDate = borrowDate?.ToString("yyyy-MM-dd");
+        //    ViewBag.ReturnDate = returnDate?.ToString("yyyy-MM-dd");
+
+        //    return View(filteredTransactions);
+        //}
+
+
+        public async Task<IActionResult> Index(string status, DateTime? borrowDate, DateTime? returnDate, int page = 1, int pageSize = 3)
         {
             var transactionsQuery = await _borrowingService.GetAllQueryableAsync();
 
@@ -38,17 +73,32 @@ namespace Library.Web.Controllers
             if (returnDate.HasValue)
             {
                 transactionsQuery = transactionsQuery.Where(t => t.ReturnedDate.HasValue &&
-                                                               t.ReturnedDate.Value.Date == returnDate.Value.Date);
+                                                                 t.ReturnedDate.Value.Date == returnDate.Value.Date);
             }
 
-            var filteredTransactions = await transactionsQuery.ToListAsync();
+            var totalCount = await transactionsQuery.CountAsync();
+            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
 
-            ViewBag.SelectedStatus = status;
-            ViewBag.BorrowDate = borrowDate?.ToString("yyyy-MM-dd");
-            ViewBag.ReturnDate = returnDate?.ToString("yyyy-MM-dd");
+            var transactions = await transactionsQuery
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Include(t => t.Book)
+                    .ThenInclude(b => b.Author)
+                .ToListAsync();
 
-            return View(filteredTransactions);
+            var model = new PagedBorrowTransactionViewModel
+            {
+                Transactions = transactions,
+                CurrentPage = page,
+                TotalPages = totalPages,
+                Status = status,
+                BorrowDate = borrowDate,
+                ReturnDate = returnDate
+            };
+
+            return View(model);
         }
+
 
 
         public async Task<IActionResult> Borrow()

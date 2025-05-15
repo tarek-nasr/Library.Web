@@ -3,22 +3,19 @@
   "WorkspaceRootPath": "D:\\Library.Web\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\authors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\authors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D3D9E3CD-BF53-4954-9620-A150307890BC}|C:\\Users\\DELL\\source\\repos\\Library.Data\\Library.Data.csproj|c:\\users\\dell\\source\\repos\\library.data\\viewmodels\\pagedborrowtransactionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3D9E3CD-BF53-4954-9620-A150307890BC}|C:\\Users\\DELL\\source\\repos\\Library.Data\\Library.Data.csproj|c:\\users\\dell\\source\\repos\\library.data\\viewmodels\\pagedbooklistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\borrowing\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\borrowing\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3D9E3CD-BF53-4954-9620-A150307890BC}|C:\\Users\\DELL\\source\\repos\\Library.Data\\Library.Data.csproj|c:\\users\\dell\\source\\repos\\library.data\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\controllers\\borrowingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:controllers\\borrowingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -44,63 +41,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Authors\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Authors\\Index.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Authors\\Index.cshtml",
-              "RelativeToolTip": "Views\\Authors\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-15T01:24:33.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Books\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Books\\Index.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Books\\Index.cshtml",
-              "RelativeToolTip": "Views\\Books\\Index.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-15T01:23:43.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PagedBookListViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Library.Data\\ViewModels\\PagedBookListViewModel.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Library.Data\\ViewModels\\PagedBookListViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Title": "PagedBorrowTransactionViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Library.Data\\ViewModels\\PagedBorrowTransactionViewModel.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Library.Data\\ViewModels\\PagedBorrowTransactionViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T01:22:32.476Z",
+              "WhenOpened": "2025-05-15T02:06:03.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "BooksController.cs",
               "DocumentMoniker": "D:\\Library.Web\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
               "ToolTip": "D:\\Library.Web\\Controllers\\BooksController.cs",
               "RelativeToolTip": "Controllers\\BooksController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAwCwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAUwDsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T00:58:35.885Z",
+              "WhenOpened": "2025-05-15T01:38:51.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Library.Data\\Models\\Book.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Library.Data\\Models\\Book.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwCcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Library.Web\\Views\\Borrowing\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Borrowing\\Index.cshtml",
+              "ToolTip": "D:\\Library.Web\\Views\\Borrowing\\Index.cshtml",
+              "RelativeToolTip": "Views\\Borrowing\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-15T01:35:34.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BorrowingController.cs",
+              "DocumentMoniker": "D:\\Library.Web\\Controllers\\BorrowingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BorrowingController.cs",
+              "ToolTip": "D:\\Library.Web\\Controllers\\BorrowingController.cs",
+              "RelativeToolTip": "Controllers\\BorrowingController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAUwDUAAACIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T00:51:14.402Z",
+              "WhenOpened": "2025-05-15T01:34:54.488Z",
               "EditorCaption": ""
             }
           ]

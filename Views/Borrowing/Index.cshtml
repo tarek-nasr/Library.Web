@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Library.Data.Models.BorrowTransaction>
+﻿@model Library.Data.ViewModels.PagedBorrowTransactionViewModel
 
 @{
     ViewData["Title"] = "Library Book List";
@@ -47,7 +47,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.Transactions)
         {
             <tr>
                 <td>@item.Book.Title</td>
@@ -76,6 +76,26 @@
 
 
 
+@if (Model.TotalPages > 1)
+{
+    <nav>
+        <ul class="pagination">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                    <a class="page-link"
+                       asp-action="Index"
+                       asp-route-page="@i"
+                       asp-route-status="@Model.Status"
+                       asp-route-borrowDate="@(Model.BorrowDate?.ToString("yyyy-MM-dd"))"
+                       asp-route-returnDate="@(Model.ReturnDate?.ToString("yyyy-MM-dd"))">
+                        @i
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+}
 
 
  

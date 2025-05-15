@@ -16,11 +16,6 @@ namespace Library.Web.Controllers
             _authorService = authorService;
         }
 
-        //public async Task<IActionResult> Index()
-        //{
-        //    var books = await _bookService.GetAllAsync();
-        //    return View(books);
-        //}
 
         public async Task<IActionResult> Index(int page = 1, int pageSize = 3)
         {
@@ -63,9 +58,6 @@ namespace Library.Web.Controllers
 
             return View(viewModel);
         }
-
-
-
 
 
         private async Task PopulateAuthorsDropDown(int? selectedId = null)
