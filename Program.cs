@@ -29,26 +29,43 @@ namespace Library.Web
 
 
 
-            // Add after building the app
+
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<LibraryDbContext>();
 
-                // Seed data
+
                 if (!context.Authors.Any())
                 {
                     context.Authors.AddRange(
-                        new Author { FullName = "John Ronald Reuel Tolkien", Email = "tolkien@example.com", Website = "www.tolkienestate.com", Bio = "English writer, poet, philologist, and academic." },
-                        new Author { FullName = "Joanne Kathleen Rowling", Email = "rowling@example.com", Website = "www.jkrowling.com", Bio = "British author and philanthropist." }
+                        new Author { FullName = "Naguib Abdel Rahman Mahfouz", Email = "mahfouz@ex.com", Website = "www.naz.com", Bio = "Egyptian" },
+                        new Author { FullName = "Ghassan Fouad Ali Kana", Email = "ghassan@ex.com", Website = "www.ghi.com", Bio = "writer" },
+                        new Author { FullName = "Ahlam Omar Saeed Moste", Email = "ahlam@ex.com", Website = "www.ahla.com", Bio = "" },
+                        new Author { FullName = "Youssef Kamal Ahmed Ziedan", Email = "youssef@ex.com", Website = "www.you.com", Bio = "writer" },
+                        new Author { FullName = "Ibrahim Sami Nasser Nasr", Email = "ibrahim@ex.com", Website = "www.ibr.com", Bio = "Jordanian" },
+                        new Author { FullName = "Tawfiq Mmoud Salim Al-Hakim", Email = "tawfiq@ex.com", Website = "www.taw.com", Bio = "playwright" },
+                        new Author { FullName = "May Elias Geges Zieh", Email = "mai@exa.com", Website = "www.may.com", Bio = " writer" },
+                        new Author { FullName = "Alaa Youssef Nal Aswany", Email = "alaa@exa.com", Website = "www.ala.com", Bio = "Contemporary" },
+                        new Author { FullName = "Hanan Fawzi Hassan Al", Email = "hanan@exam.com", Website = "www.han.com", Bio = "Prominent " }
                     );
+
                     context.SaveChanges();
 
                     context.Books.AddRange(
-                        new Book { Title = "The Hobbit", Genre = Genre.Fantasy, AuthorId = 1, Description = "Fantasy novel about Bilbo Baggins." },
-                        new Book { Title = "Harry Potter", Genre = Genre.Fantasy, AuthorId = 2, Description = "Story of a young wizard." }
+                        new Book { Title = "Children of Our Alley", Genre = Genre.Drama, AuthorId = 1, Description = "A famous novel" },
+                        new Book { Title = "Men in the Sun", Genre = Genre.History, AuthorId = 2, Description = "A novel" },
+                        new Book { Title = "The Prophet", Genre = Genre.Romance, AuthorId = 3, Description = "A collection of poeticStory" },
+                        new Book { Title = "Memory in the Flesh", Genre = Genre.Romance, AuthorId = 4, Description = "A romantic novel" },
+                        new Book { Title = "Azazel", Genre = Genre.History, AuthorId = 5, Description = "" },
+                        new Book { Title = "Diary of a Country Prosecutor", Genre = Genre.SciFi, AuthorId = 7, Description = "A novel" },
+                        new Book { Title = "The White Rose", Genre = Genre.Poetry, AuthorId = 8, Description = "A collection of emotional" },
+                        new Book { Title = "The Yacoubian Building", Genre = Genre.Drama, AuthorId = 9, Description = "A novel exposing" },
+                        new Book { Title = "Woman at Point Zero", Genre = Genre.Drama, AuthorId = 10, Description = "A novel about a woman" }
                     );
+
                     context.SaveChanges();
+
                 }
             }
 

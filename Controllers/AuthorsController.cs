@@ -14,7 +14,7 @@ namespace Library.Web.Controllers
         }
 
 
-        public async Task<IActionResult> Index(int page = 1, int pageSize = 3)
+        public async Task<IActionResult> Index(int page = 1, int pageSize = 5)
         {
             var allAuthors = await _authorService.GetAllAsync();
             var totalAuthors = allAuthors.Count();

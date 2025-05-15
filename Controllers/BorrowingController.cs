@@ -16,42 +16,7 @@ namespace Library.Web.Controllers
 
 
 
-        //public async Task<IActionResult> Index(string status, DateTime? borrowDate, DateTime? returnDate)
-        //{
-        //    var transactionsQuery = await _borrowingService.GetAllQueryableAsync();
-
-        //    if (!string.IsNullOrEmpty(status))
-        //    {
-        //        transactionsQuery = status switch
-        //        {
-        //            "borrowed" => transactionsQuery.Where(t => t.ReturnedDate == null),
-        //            "available" => transactionsQuery.Where(t => t.ReturnedDate != null),
-        //            _ => transactionsQuery
-        //        };
-        //    }
-
-        //    if (borrowDate.HasValue)
-        //    {
-        //        transactionsQuery = transactionsQuery.Where(t => t.BorrowedDate.Date == borrowDate.Value.Date);
-        //    }
-
-        //    if (returnDate.HasValue)
-        //    {
-        //        transactionsQuery = transactionsQuery.Where(t => t.ReturnedDate.HasValue &&
-        //                                                       t.ReturnedDate.Value.Date == returnDate.Value.Date);
-        //    }
-
-        //    var filteredTransactions = await transactionsQuery.ToListAsync();
-
-        //    ViewBag.SelectedStatus = status;
-        //    ViewBag.BorrowDate = borrowDate?.ToString("yyyy-MM-dd");
-        //    ViewBag.ReturnDate = returnDate?.ToString("yyyy-MM-dd");
-
-        //    return View(filteredTransactions);
-        //}
-
-
-        public async Task<IActionResult> Index(string status, DateTime? borrowDate, DateTime? returnDate, int page = 1, int pageSize = 3)
+        public async Task<IActionResult> Index(string status, DateTime? borrowDate, DateTime? returnDate, int page = 1, int pageSize = 5)
         {
             var transactionsQuery = await _borrowingService.GetAllQueryableAsync();
 
