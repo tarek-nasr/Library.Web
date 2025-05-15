@@ -1,4 +1,5 @@
 ﻿using Library.Data.Models;
+using Library.Data.ViewModels;
 using Library.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,11 +12,29 @@ namespace Library.Web.Controllers
         {
             _authorService = authorService;
         }
-        public async Task<IActionResult> Index()
+
+
+        public async Task<IActionResult> Index(int page = 1, int pageSize = 3)
         {
-            var authors = await _authorService.GetAllAsync();
-            return View(authors);
+            var allAuthors = await _authorService.GetAllAsync();
+            var totalAuthors = allAuthors.Count();
+            var totalPages = (int)Math.Ceiling(totalAuthors / (double)pageSize);
+
+            var authorsOnPage = allAuthors
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            var model = new PagedAuthorListViewModel
+            {
+                Authors = authorsOnPage,
+                CurrentPage = page,
+                TotalPages = totalPages
+            };
+
+            return View(model);
         }
+
         public async Task<IActionResult> Details(int id)
         {
             var author = await _authorService.GetByIdAsync(id);

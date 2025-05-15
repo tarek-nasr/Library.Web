@@ -1,6 +1,7 @@
-﻿@model IEnumerable<Library.Data.Models.Author>
+﻿@model Library.Data.ViewModels.PagedAuthorListViewModel
 
 @{
+    
     ViewData["Title"] = "Index";
 }
 
@@ -9,45 +10,46 @@
 <p>
     <a asp-action="Create" class="btn btn-success">Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
-            <th>           
-                @Html.DisplayNameFor(model => model.FullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Website)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bio)
-            </th>
+            <th>@Html.DisplayNameFor(m => m.Authors.First().FullName)</th>
+            <th>@Html.DisplayNameFor(m => m.Authors.First().Email)</th>
+            <th>@Html.DisplayNameFor(m => m.Authors.First().Website)</th>
+            <th>@Html.DisplayNameFor(m => m.Authors.First().Bio)</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Website)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bio)
-            </td>
+        @foreach (var item in Model.Authors)
+        {
+            <tr>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Website</td>
+                <td>@item.Bio</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
                 </td>
-        </tr>
-}
+            </tr>
+        }
     </tbody>
 </table>
+
+@if (Model.TotalPages > 1)
+{
+    <nav>
+        <ul class="pagination">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                    <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+}
+
