@@ -16,11 +16,33 @@ namespace Library.Web.Controllers
             _authorService = authorService;
         }
 
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index()
+        //{
+        //    var books = await _bookService.GetAllAsync();
+        //    return View(books);
+        //}
+
+        public async Task<IActionResult> Index(int page = 1, int pageSize = 3)
         {
-            var books = await _bookService.GetAllAsync();
-            return View(books);
+            var allBooks = await _bookService.GetAllAsync();
+            var totalBooks = allBooks.Count();
+            var totalPages = (int)Math.Ceiling(totalBooks / (double)pageSize);
+
+            var booksOnPage = allBooks
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            var model = new PagedBookListViewModel
+            {
+                Books = booksOnPage,
+                CurrentPage = page,
+                TotalPages = totalPages
+            };
+
+            return View(model);
         }
+
 
         public async Task<IActionResult> Details(int id)
         {
