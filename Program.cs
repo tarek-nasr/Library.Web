@@ -24,6 +24,37 @@ namespace Library.Web
 
             var app = builder.Build();
 
+
+
+
+
+
+            // Add after building the app
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var context = services.GetRequiredService<LibraryDbContext>();
+
+                // Seed data
+                if (!context.Authors.Any())
+                {
+                    context.Authors.AddRange(
+                        new Author { FullName = "John Ronald Reuel Tolkien", Email = "tolkien@example.com", Website = "www.tolkienestate.com", Bio = "English writer, poet, philologist, and academic." },
+                        new Author { FullName = "Joanne Kathleen Rowling", Email = "rowling@example.com", Website = "www.jkrowling.com", Bio = "British author and philanthropist." }
+                    );
+                    context.SaveChanges();
+
+                    context.Books.AddRange(
+                        new Book { Title = "The Hobbit", Genre = Genre.Fantasy, AuthorId = 1, Description = "Fantasy novel about Bilbo Baggins." },
+                        new Book { Title = "Harry Potter", Genre = Genre.Fantasy, AuthorId = 2, Description = "Story of a young wizard." }
+                    );
+                    context.SaveChanges();
+                }
+            }
+
+
+
+
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {

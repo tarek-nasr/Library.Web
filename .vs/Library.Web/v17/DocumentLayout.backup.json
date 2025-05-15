@@ -3,19 +3,15 @@
   "WorkspaceRootPath": "D:\\Library.Web\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\borrowing\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\borrowing\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\books\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\books\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\controllers\\borrowingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:controllers\\borrowingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|d:\\library.web\\views\\books\\_bookdetailspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC8561BC-3513-4229-B18A-828E38628168}|Library.Web.csproj|solutionrelative:views\\books\\_bookdetailspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3D9E3CD-BF53-4954-9620-A150307890BC}|C:\\Users\\DELL\\source\\repos\\Library.Data\\Library.Data.csproj|c:\\users\\dell\\source\\repos\\library.data\\viewmodels\\bookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60C4C410-5781-4FB6-9432-6FDE6E2C47EE}|C:\\Users\\DELL\\source\\repos\\Library.Services\\Library.Services.csproj|c:\\users\\dell\\source\\repos\\library.services\\services\\borrowingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,19 +21,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Books\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Books\\Details.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Books\\Details.cshtml",
-              "RelativeToolTip": "Views\\Books\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Library.Web\\Views\\Borrowing\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Borrowing\\Index.cshtml",
+              "ToolTip": "D:\\Library.Web\\Views\\Borrowing\\Index.cshtml",
+              "RelativeToolTip": "Views\\Borrowing\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-14T12:27:38.956Z",
+              "WhenOpened": "2025-05-14T23:24:19.164Z",
               "EditorCaption": ""
             },
             {
@@ -55,38 +51,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "_BookDetailsPartial.cshtml",
-              "DocumentMoniker": "D:\\Library.Web\\Views\\Books\\_BookDetailsPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Books\\_BookDetailsPartial.cshtml",
-              "ToolTip": "D:\\Library.Web\\Views\\Books\\_BookDetailsPartial.cshtml",
-              "RelativeToolTip": "Views\\Books\\_BookDetailsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-14T12:27:11.256Z",
+              "Title": "BorrowingService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Library.Services\\Services\\BorrowingService.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Library.Services\\Services\\BorrowingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T23:20:51.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BooksController.cs",
-              "DocumentMoniker": "D:\\Library.Web\\Controllers\\BooksController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
-              "ToolTip": "D:\\Library.Web\\Controllers\\BooksController.cs",
-              "RelativeToolTip": "Controllers\\BooksController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAUwBcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "BorrowingController.cs",
+              "DocumentMoniker": "D:\\Library.Web\\Controllers\\BorrowingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BorrowingController.cs",
+              "ToolTip": "D:\\Library.Web\\Controllers\\BorrowingController.cs",
+              "RelativeToolTip": "Controllers\\BorrowingController.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAowDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T12:25:09.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BookViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Library.Data\\ViewModels\\BookViewModel.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Library.Data\\ViewModels\\BookViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T12:24:31.876Z",
+              "WhenOpened": "2025-05-14T23:19:28.479Z",
               "EditorCaption": ""
             }
           ]

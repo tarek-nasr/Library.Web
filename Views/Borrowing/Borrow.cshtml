@@ -1,25 +1,60 @@
 ﻿@model Library.Data.ViewModels.BorrowViewModel
 @{
-    ViewData["Title"] = "Borrow Book";
+    ViewData["Title"] = "Borrow a Book";
 }
 
 <h2>Borrow a Book</h2>
 
 <form asp-action="Borrow" method="post">
     <div class="form-group">
-        <label asp-for="BookId" class="control-label">Books</label>
-        <select asp-for="BookId" asp-items="ViewBag.BookList" class="form-control">
-            <option value="">-- Select --</option>
+        <label asp-for="BookId">Select Book</label>
+        <select asp-for="BookId" asp-items="ViewBag.BookList" class="form-control" id="bookDropdown">
+            <option value="">-- Select a Book --</option>
         </select>
         <span asp-validation-for="BookId" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Borrow</button>
+    <div id="availabilityStatus" class="mb-3"></div>
+
+    <button type="submit" class="btn btn-primary" id="borrowButton" disabled>Borrow</button>
 </form>
+
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function checkAvailability(bookId) {
+            if (!bookId) {
+                $('#availabilityStatus').text('');
+                $('#borrowButton').prop('disabled', true);
+                return;
+            }
+
+            $.get('/Borrowing/CheckAvailability', { bookId }, function (res) {
+                if (res.isAvailable) {
+                    $('#availabilityStatus').text('Status: Available').css('color', 'green');
+                    $('#borrowButton').prop('disabled', false);
+                } else {
+                    $('#availabilityStatus').text('Status: Checked Out').css('color', 'red');
+                    $('#borrowButton').prop('disabled', true);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            const selectedBook = $('#bookDropdown').val();
+            checkAvailability(selectedBook); 
+
+            $('#bookDropdown').on('change', function () {
+                checkAvailability($(this).val());
+            });
+        });
+    </script>
 }
+
+
 
 
 

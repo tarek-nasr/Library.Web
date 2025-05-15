@@ -2,6 +2,7 @@
 using Library.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace Library.Web.Controllers
 {
@@ -12,12 +13,42 @@ namespace Library.Web.Controllers
         {
             _borrowingService = borrowingService;
         }
-        public async Task<IActionResult> Index()
-        {
-            var transactions = await _borrowingService.GetAllAsync();
-            return View(transactions);
-        }
 
+
+
+        public async Task<IActionResult> Index(string status, DateTime? borrowDate, DateTime? returnDate)
+        {
+            var transactionsQuery = await _borrowingService.GetAllQueryableAsync();
+
+            if (!string.IsNullOrEmpty(status))
+            {
+                transactionsQuery = status switch
+                {
+                    "borrowed" => transactionsQuery.Where(t => t.ReturnedDate == null),
+                    "available" => transactionsQuery.Where(t => t.ReturnedDate != null),
+                    _ => transactionsQuery
+                };
+            }
+
+            if (borrowDate.HasValue)
+            {
+                transactionsQuery = transactionsQuery.Where(t => t.BorrowedDate.Date == borrowDate.Value.Date);
+            }
+
+            if (returnDate.HasValue)
+            {
+                transactionsQuery = transactionsQuery.Where(t => t.ReturnedDate.HasValue &&
+                                                               t.ReturnedDate.Value.Date == returnDate.Value.Date);
+            }
+
+            var filteredTransactions = await transactionsQuery.ToListAsync();
+
+            ViewBag.SelectedStatus = status;
+            ViewBag.BorrowDate = borrowDate?.ToString("yyyy-MM-dd");
+            ViewBag.ReturnDate = returnDate?.ToString("yyyy-MM-dd");
+
+            return View(filteredTransactions);
+        }
 
 
         public async Task<IActionResult> Borrow()
@@ -26,9 +57,6 @@ namespace Library.Web.Controllers
             ViewBag.BookList = new SelectList(books, "Id", "Title");
             return View(new BorrowViewModel());
         }
-
-
-
         [HttpPost]
         public async Task<IActionResult> Borrow(BorrowViewModel model)
         {
@@ -61,12 +89,13 @@ namespace Library.Web.Controllers
             return View(new ReturnViewModel());
         }
 
-
         [HttpPost]
         public async Task<IActionResult> Return(ReturnViewModel model)
         {
             if (!ModelState.IsValid)
             {
+                var active = await _borrowingService.GetActiveBorrowingsAsync();
+                ViewBag.ActiveBorrowings = new SelectList(active, "Id", "BookTitle");
                 return View(model);
             }
 
@@ -78,9 +107,22 @@ namespace Library.Web.Controllers
             catch (Exception ex)
             {
                 ModelState.AddModelError("", ex.Message);
+                var active = await _borrowingService.GetActiveBorrowingsAsync();
+                ViewBag.ActiveBorrowings = new SelectList(active, "Id", "BookTitle");
                 return View(model);
             }
         }
+        [HttpGet]
+        public async Task<JsonResult> CheckAvailability(int bookId)
+        {
+            var books = await _borrowingService.GetAvailableBooksAsync();
+            var isAvailable = books.Any(b => b.Id == bookId);
+            return Json(new { isAvailable });
+        }
+
+
+
+
 
     }
 }

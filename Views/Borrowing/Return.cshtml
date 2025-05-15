@@ -1,5 +1,4 @@
 ﻿@model Library.Data.ViewModels.ReturnViewModel
-
 @{
     ViewData["Title"] = "Return Book";
 }
@@ -8,9 +7,9 @@
 
 <form asp-action="Return" method="post">
     <div class="form-group">
-        <label asp-for="TransactionId" class="control-label">Active Borrowings</label>
+        <label asp-for="TransactionId">Active Borrowings</label>
         <select asp-for="TransactionId" asp-items="ViewBag.ActiveBorrowings" class="form-control">
-            <option value="">-- Select Borrowing --</option>
+            <option value="">-- Select --</option>
         </select>
         <span asp-validation-for="TransactionId" class="text-danger"></span>
     </div>
@@ -21,3 +20,6 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+
+
+
